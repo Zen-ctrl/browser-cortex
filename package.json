@@ -1,0 +1,82 @@
+{
+  "name": "browser-cortex",
+  "version": "0.3.0-beta.1",
+  "private": true,
+  "description": "Local-first browser intelligence with encrypted memory, inspectable workflows, and explicit permissions.",
+  "keywords": [
+    "browser-ai",
+    "browser-extension",
+    "local-first",
+    "on-device-ai",
+    "privacy",
+    "typescript",
+    "webgpu",
+    "workflow-automation"
+  ],
+  "homepage": "https://github.com/Zen-ctrl/browser-cortex#readme",
+  "bugs": {
+    "url": "https://github.com/Zen-ctrl/browser-cortex/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zen-ctrl/browser-cortex.git"
+  },
+  "license": "Apache-2.0",
+  "type": "module",
+  "packageManager": "pnpm@10.15.0",
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild"]
+  },
+  "scripts": {
+    "doctor": "node scripts/doctor.mjs",
+    "dev": "pnpm --filter @browser-cortex/workbench dev",
+    "dev:demo": "pnpm --filter @browser-cortex/demo-site dev",
+    "dev:gateway": "pnpm --filter @browser-cortex/developer-online-gateway dev",
+    "dev:example:search": "pnpm --filter @browser-cortex/example-vanilla-local-search dev",
+    "dev:example:workflow": "pnpm --filter @browser-cortex/example-react-workflow-review dev",
+    "build": "node scripts/stage-runtime-assets.mjs && pnpm -r --workspace-concurrency=1 --if-present run build && node scripts/verify-build.mjs",
+    "lint": "node scripts/lint.mjs",
+    "typecheck": "node scripts/typecheck-workspaces.mjs",
+    "test": "vitest run --config vitest.config.ts",
+    "check": "pnpm lint && pnpm typecheck && pnpm test && pnpm check:public",
+    "test:e2e": "playwright test --config tests/playwright.config.ts",
+    "test:extension": "vitest run --config vitest.config.ts tests/extension",
+    "test:security": "vitest run --config vitest.config.ts tests/security",
+    "test:offline": "vitest run --config vitest.config.ts tests/offline",
+    "verify:acceptance": "node scripts/acceptance.mjs",
+    "bench:local": "tsx benchmarks/runners/local.ts",
+    "verify:real-model": "tsx benchmarks/runners/real-model/run.mts",
+    "verify:trusted-release": "node scripts/verify-real-model-report.mjs && node scripts/verify-release.mjs",
+    "rebuild:trusted-release": "node scripts/rebuild-trusted-release.mjs",
+    "check:copy": "node scripts/check-copy.mjs",
+    "check:attribution": "node scripts/check-attribution.mjs",
+    "check:repo-hygiene": "node scripts/check-repo-hygiene.mjs",
+    "check:public": "node scripts/check-public-readiness.mjs",
+    "scan:secrets": "node scripts/scan-secrets.mjs",
+    "verify:models": "node scripts/verify-model-manifest.mjs",
+    "verify:release": "node scripts/verify-release.mjs",
+    "runtime:fetch": "node scripts/fetch-runtime-assets.mjs",
+    "package:extension": "node scripts/package-extension.mjs",
+    "sbom": "node scripts/generate-sbom.mjs",
+    "release:public": "node scripts/build-public-release.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "@types/chrome": "0.3.0",
+    "@types/node": "24.10.0",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "5.1.1",
+    "fake-indexeddb": "6.2.4",
+    "fast-check": "4.10.2",
+    "happy-dom": "20.14.5",
+    "jszip": "3.10.2",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "vite": "7.3.6",
+    "vitest": "4.1.11"
+  }
+}

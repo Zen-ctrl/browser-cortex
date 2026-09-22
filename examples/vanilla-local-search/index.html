@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="Minimal BrowserCortex encrypted local-search example" />
+    <title>BrowserCortex local search example</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <a href="../../"><span class="logo">BC</span><strong>BrowserCortex</strong></a>
+        <span class="example-label">Vanilla JavaScript example</span>
+      </header>
+      <section class="hero">
+        <p class="eyebrow">Encrypted local search</p>
+        <h1>Search a collection that stays in this browser.</h1>
+        <p>Create a vault, import supported text, then retrieve source-backed passages through the workspace memory package. No account or online model is required.</p>
+      </section>
+      <div class="boundary"><strong>Local-only example</strong><span>No input on this page is sent to a server by BrowserCortex.</span></div>
+      <section class="workspace">
+        <article class="card controls">
+          <div class="card-heading"><span>01</span><div><p class="eyebrow">Vault</p><h2>Open private memory</h2></div></div>
+          <label>Passphrase<input id="passphrase" autocomplete="new-password" type="password" /></label>
+          <div class="row"><button class="primary" id="create-vault" type="button">Create vault</button><button id="unlock-vault" type="button">Unlock existing</button></div>
+          <p class="status" id="vault-status">No vault is open.</p>
+        </article>
+        <article class="card controls">
+          <div class="card-heading"><span>02</span><div><p class="eyebrow">Sources</p><h2>Import local text</h2></div></div>
+          <label class="file-drop" for="source-file"><span>Choose .txt or .md</span><small>20 MiB maximum. Active content is not supported.</small></label>
+          <input accept=".txt,.md,text/plain,text/markdown" hidden id="source-file" type="file" />
+          <button id="load-synthetic" type="button">Use three synthetic notes</button>
+          <ul id="sources"><li>No sources imported.</li></ul>
+        </article>
+        <article class="card search-card">
+          <div class="card-heading"><span>03</span><div><p class="eyebrow">Retrieval</p><h2>Find supporting passages</h2></div></div>
+          <form id="search-form">
+            <label for="query">Search query</label>
+            <div class="search-row"><input id="query" placeholder="When did the delivery date change?" /><button class="primary" type="submit">Search</button></div>
+          </form>
+          <div id="results" class="results"><div class="empty"><span>⌕</span><strong>No search has run</strong><p>Results include source identifiers and actual stored passages.</p></div></div>
+        </article>
+        <article class="card adapter-card">
+          <div class="card-heading"><span>04</span><div><p class="eyebrow">Optional semantic search</p><h2>Install the pinned embedding</h2></div></div>
+          <p>Review the pinned model, revision, host, license, download size, and cache behavior before consenting. Cancellation never retries or falls back online.</p>
+          <label>Model ID<input id="model-id" readonly /></label>
+          <label>Immutable revision<input id="model-revision" readonly /></label>
+          <button id="configure-model" type="button">Review embedding download</button>
+          <p class="status" id="model-status">Lexical search remains available without a model.</p>
+        </article>
+      </section>
+      <section class="event-log">
+        <div><p class="eyebrow">Session log</p><h2>Operations, not private content</h2></div>
+        <ol id="events"><li>Example initialized in local-only mode.</li></ol>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

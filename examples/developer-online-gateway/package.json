@@ -1,0 +1,9 @@
+{
+  "name": "@browser-cortex/developer-online-gateway",
+  "version": "0.3.0-beta.1",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "tsx src/server.ts", "build": "tsc -p tsconfig.json", "typecheck": "tsc -p tsconfig.json --noEmit" },
+  "dependencies": { "zod": "4.6.5" },
+  "devDependencies": { "@types/node": "24.10.0", "tsx": "4.20.6", "typescript": "5.9.3" }
+}

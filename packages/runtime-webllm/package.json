@@ -1,0 +1,15 @@
+{
+  "name": "@browser-cortex/runtime-webllm",
+  "version": "0.3.0-beta.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./worker-cache": "./src/worker-cache.ts"
+  },
+  "scripts": { "build": "tsc -p tsconfig.json" },
+  "dependencies": {
+    "@browser-cortex/contracts": "workspace:*",
+    "@mlc-ai/web-llm": "0.2.85"
+  }
+}

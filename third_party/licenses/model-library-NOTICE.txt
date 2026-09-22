@@ -1,0 +1,35 @@
+BrowserCortex bundled executable model-library notice
+
+Artifact:
+SmolLM2-360M-Instruct-q4f16_1_cs1k-webgpu.wasm
+
+Binary source:
+https://github.com/mlc-ai/binary-mlc-llm-libs/commit/025bcaf3780fa8254f5e5efd3bfea0a5397248f4
+
+Upstream build provenance:
+https://github.com/mlc-ai/binary-mlc-llm-libs/pull/165
+
+The binary repository does not include a standalone license file. Its upstream
+build pull request records the exact source revisions used for this object:
+
+Apache TVM
+Source: https://github.com/apache/tvm/commit/bc1a904ec1ad89454ee6577d66cde1268b8f6bc8
+License: Apache-2.0
+Notice:
+Apache TVM
+Copyright 2019-2023 The Apache Software Foundation
+
+This product includes software developed at
+The Apache Software Foundation (http://www.apache.org/).
+
+MLC LLM
+Source: https://github.com/mlc-ai/mlc-llm/commit/2008fe8343e1f40ef89ee57b9287aebcf1b86c98
+License: Apache-2.0
+Notice:
+MLC LLM
+Copyright (c) 2023-2025 by MLC LLM Contributors
+
+The complete Apache-2.0 terms are included in the extension's LICENSE.txt and
+in the generated third-party license bundle. The model weights and their
+separate base-model license are inventoried in models/registry.json; the
+weights are not included in the extension archive.

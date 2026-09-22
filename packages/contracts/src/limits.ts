@@ -1,0 +1,28 @@
+export const LIMITS = Object.freeze({
+  taskInstructionCharacters: 24_000,
+  selectedPageCharacters: 16_000,
+  generatedOutputBytes: 1_048_576,
+  externalToolOutputBytes: 1_048_576,
+  extensionMessageBytes: 65_536,
+  sourceIds: 128,
+  sourceReferences: 256,
+  contextSegments: 128,
+  contextSegmentCharacters: 24_000,
+  identifierCharacters: 128,
+  reasonCodes: 32,
+  reasonCodeCharacters: 96,
+  modelLabelCharacters: 256,
+  endpointCharacters: 2_048,
+  policyVersionCharacters: 128,
+  jsonDepth: 32,
+  jsonEntries: 10_000,
+  jsonStringCharacters: 1_048_576,
+  canonicalBytes: 2_097_152,
+  onlineRequestTimeoutMs: 60_000,
+  approvalLifetimeMs: 5 * 60_000,
+  sessionInactivityMs: 30 * 60_000,
+  approvalUses: 32,
+  bridgeSessionRequests: 1_000,
+} as const);
+
+export const SCHEMA_VERSION = 1 as const;

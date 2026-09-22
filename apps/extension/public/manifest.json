@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "BrowserCortex",
+  "version": "0.3.0.1",
+  "version_name": "0.3.0-beta.1",
+  "description": "Review selected page content with local models, scoped memory, and explicit permissions.",
+  "minimum_chrome_version": "116",
+  "permissions": ["activeTab", "scripting", "storage", "sidePanel"],
+  "optional_host_permissions": [
+    "https://huggingface.co/*",
+    "https://*.huggingface.co/*",
+    "https://cdn-lfs.huggingface.co/*",
+    "https://*.xethub.hf.co/*",
+    "https://*.hf.co/*"
+  ],
+  "background": {
+    "service_worker": "assets/background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Open BrowserCortex"
+  },
+  "side_panel": {
+    "default_path": "panel.html"
+  },
+  "options_page": "options.html",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; worker-src 'self'; connect-src 'self' https://huggingface.co https://*.huggingface.co https://cdn-lfs.huggingface.co https://*.xethub.hf.co https://*.hf.co"
+  }
+}

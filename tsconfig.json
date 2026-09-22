@@ -1,0 +1,17 @@
+{
+  "files": [],
+  "references": [
+    { "path": "packages/contracts" },
+    { "path": "packages/policy" },
+    { "path": "packages/privacy" },
+    { "path": "packages/workflows" },
+    { "path": "packages/memory" },
+    { "path": "packages/core" },
+    { "path": "packages/runtime-transformers" },
+    { "path": "packages/runtime-webllm" },
+    { "path": "packages/bridge" },
+    { "path": "packages/ui" },
+    { "path": "packages/testkit" }
+  ]
+}
+

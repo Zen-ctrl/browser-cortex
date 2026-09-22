@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-09-22",
+  "sourceWeightsIncluded": false,
+  "defaults": {
+    "embedding": null,
+    "generation": null
+  },
+  "models": [
+    {
+      "id": "minilm-l6-v2-q8",
+      "displayName": "all-MiniLM-L6-v2 quantized ONNX",
+      "taskCapabilities": ["embedding", "semantic-search"],
+      "upstreamOwner": "Xenova",
+      "sourceModel": "Xenova/all-MiniLM-L6-v2",
+      "revision": "751bff37182d3f1213fa05d7196b954e230abad9",
+      "conversionProvenance": "Repository-provided Transformers.js ONNX export",
+      "license": {
+        "identifier": "Apache-2.0",
+        "source": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/tree/751bff37182d3f1213fa05d7196b954e230abad9"
+      },
+      "runtime": {
+        "adapter": "@browser-cortex/runtime-transformers",
+        "package": "@huggingface/transformers",
+        "version": "4.3.0",
+        "executionModes": ["wasm", "webgpu"]
+      },
+      "quantization": "q8",
+      "artifacts": [
+        {
+          "kind": "model-data",
+          "path": "onnx/model_quantized.onnx",
+          "url": "https://huggingface.co/Xenova/all-MiniLM-L6-v2/resolve/751bff37182d3f1213fa05d7196b954e230abad9/onnx/model_quantized.onnx",
+          "bytes": 22972370,
+          "sha256": "afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1",
+          "executable": false
+        },
+        {
+          "kind": "runtime-executable",
+          "package": "onnxruntime-web",
+          "packageVersion": "1.31.0-dev.20260914-8d85527a0",
+          "packageIntegrity": "sha512-Iy7rtadoBgxS/LLvDr3QW38DB1PNXRnr0GJMcL0TAt7c9qjgVQl83UlGCVyeAnK2InpmW8Uc3PL8XIuqtDeF6g==",
+          "path": "dist/ort-wasm-simd-threaded.asyncify.wasm",
+          "outputName": "ort-wasm-simd-threaded.asyncify",
+          "bytes": 26861777,
+          "sha256": "49871f5a4409519797e127440868a6d1923339d9185907f301a5b2a1d90af082",
+          "local": false,
+          "packagedDependency": true,
+          "executable": true,
+          "license": {
+            "identifier": "MIT",
+            "buildProvenance": "https://github.com/microsoft/onnxruntime/commit/8d85527a010e294a26b274749f74294b2a32cec5",
+            "sources": [
+              {
+                "repository": "https://github.com/microsoft/onnxruntime",
+                "revision": "8d85527a010e294a26b274749f74294b2a32cec5",
+                "license": "https://github.com/microsoft/onnxruntime/blob/8d85527a010e294a26b274749f74294b2a32cec5/LICENSE",
+                "notice": "https://github.com/microsoft/onnxruntime/blob/8d85527a010e294a26b274749f74294b2a32cec5/ThirdPartyNotices.txt"
+              }
+            ],
+            "basis": "The workbench bundles this exact WASM file from the lockfile-pinned onnxruntime-web package; release builds verify its byte count and SHA-256 before accepting it."
+          }
+        }
+      ],
+      "installation": {
+        "host": "huggingface.co",
+        "explicitConsentRequired": true,
+        "cacheOwnedByRuntime": true,
+        "integrityEnforced": false,
+        "integrityNote": "The registry pins the verified quantized ONNX artifact. Runtime-managed remote caches must not be described as independently hash verified unless installation code verifies the cached bytes."
+      },
+      "knownLimitations": [
+        "Embedding quality is task dependent.",
+        "The adapter requires a packaged local ONNX Runtime WASM path in extension mode.",
+        "WebGPU and WASM support must be measured separately."
+      ]
+    },
+    {
+      "id": "smollm2-360m-q4f16",
+      "displayName": "SmolLM2 360M Instruct q4f16 MLC",
+      "taskCapabilities": ["generation", "bounded-extraction", "bounded-workflow-planning"],
+      "upstreamOwner": "mlc-ai",
+      "sourceModel": "HuggingFaceTB/SmolLM2-360M-Instruct",
+      "runtimeModelId": "SmolLM2-360M-Instruct-q4f16_1-MLC",
+      "sourceRevision": "a10cc1512eabd3dde888204e902eca88bddb4951",
+      "conversionRepository": "mlc-ai/SmolLM2-360M-Instruct-q4f16_1-MLC",
+      "revision": "3a622fd89e0216e8bb10c410c007c786baa8a033",
+      "conversionProvenance": "MLC conversion repository. Its card identifies the base model but omits a separate license field.",
+      "license": {
+        "identifier": "Apache-2.0",
+        "source": "https://huggingface.co/HuggingFaceTB/SmolLM2-360M-Instruct/tree/a10cc1512eabd3dde888204e902eca88bddb4951",
+        "conversionMetadataCaveat": "The MLC conversion repository has no independent license field. Review the base license and conversion repository contents before release."
+      },
+      "runtime": {
+        "adapter": "@browser-cortex/runtime-webllm",
+        "package": "@mlc-ai/web-llm",
+        "version": "0.2.85",
+        "prebuiltConfigVersion": "v0_2_84",
+        "executionModes": ["webgpu"]
+      },
+      "quantization": "q4f16_1",
+      "weightBytes": 203614080,
+      "artifacts": [
+        { "kind": "weight-shard", "ordinal": 0, "bytes": 33459840, "sha256": "5d5807a95573ed1d72e8c7f2bac2911ba1ad78bb486ab9745693eb51e8b7616c", "path": "params_shard_0.bin", "executable": false },
+        { "kind": "weight-shard", "ordinal": 1, "bytes": 33200640, "sha256": "7f6901def1d79db3c3eabca3e271ce7af131d3bec599971b98ad66f3cdbc3729", "path": "params_shard_1.bin", "executable": false },
+        { "kind": "weight-shard", "ordinal": 2, "bytes": 33200640, "sha256": "bb2d45b7b35602e0667575de94f750dd1ec5cd5d01a840c2f2fb9bdc553fc66a", "path": "params_shard_2.bin", "executable": false },
+        { "kind": "weight-shard", "ordinal": 3, "bytes": 33200640, "sha256": "0f5c419205d2d03508dbd10f937c1508902ae4ea5330a6493b3e2e7ef0df7ed0", "path": "params_shard_3.bin", "executable": false },
+        { "kind": "weight-shard", "ordinal": 4, "bytes": 33200640, "sha256": "959bd10c37b9634a077e636be15e59059bea6a9a152de2e7bab81d248d0644e6", "path": "params_shard_4.bin", "executable": false },
+        { "kind": "weight-shard", "ordinal": 5, "bytes": 33200640, "sha256": "99c3b1c9ef35f322013e07c607ae9c271e5895138e347a7e60acbbe1645407e8", "path": "params_shard_5.bin", "executable": false },
+        { "kind": "weight-shard", "ordinal": 6, "bytes": 4151040, "sha256": "09b74f2ad1f35fcacc6567b6b6b0fc4a69dd6191dd94fad413a252096693c8c2", "path": "params_shard_6.bin", "executable": false },
+        {
+          "kind": "executable-model-library",
+          "upstreamRevision": "025bcaf3780fa8254f5e5efd3bfea0a5397248f4",
+          "bytes": 5708562,
+          "sha256": "5c20098605780550c40e9c64d288dd6e369707a08d4133037156019b064ad41b",
+          "sri": "sha256-XCAJhgV4BVDEDpxk0ojdbjaXB6CNQTMDcVYBmwZK1Bs=",
+          "path": "vendor/runtime/SmolLM2-360M-Instruct-q4f16_1_cs1k-webgpu.wasm",
+          "license": {
+            "identifier": "Apache-2.0",
+            "buildProvenance": "https://github.com/mlc-ai/binary-mlc-llm-libs/pull/165",
+            "sources": [
+              {
+                "repository": "https://github.com/apache/tvm",
+                "revision": "bc1a904ec1ad89454ee6577d66cde1268b8f6bc8",
+                "license": "https://github.com/apache/tvm/blob/bc1a904ec1ad89454ee6577d66cde1268b8f6bc8/LICENSE",
+                "notice": "https://github.com/apache/tvm/blob/bc1a904ec1ad89454ee6577d66cde1268b8f6bc8/NOTICE"
+              },
+              {
+                "repository": "https://github.com/mlc-ai/mlc-llm",
+                "revision": "2008fe8343e1f40ef89ee57b9287aebcf1b86c98",
+                "license": "https://github.com/mlc-ai/mlc-llm/blob/2008fe8343e1f40ef89ee57b9287aebcf1b86c98/LICENSE",
+                "notice": "https://github.com/mlc-ai/mlc-llm/blob/2008fe8343e1f40ef89ee57b9287aebcf1b86c98/NOTICE"
+              }
+            ],
+            "basis": "The binary repository has no standalone license file. Its upstream build pull request identifies the exact Apache TVM and MLC-LLM source revisions used to compile this object; both revisions declare Apache-2.0 and publish the notices retained with this project."
+          },
+          "local": true,
+          "executable": true
+        }
+      ],
+      "installation": {
+        "host": "huggingface.co",
+        "explicitConsentRequired": true,
+        "cacheOwnedByRuntime": true,
+        "integrityEnforced": false,
+        "runtimeDiscovery": "The adapter reads the installed WebLLM prebuiltAppConfig and enables only this exact model_id. Weight paths are relative to the immutable conversion revision. The executable model library is vendored and verified separately.",
+        "extensionRule": "A caller must package model_lib locally and pass its local URL, SHA-256, and SRI. HTTP and HTTPS model_lib URLs are rejected in extension mode."
+      },
+      "knownLimitations": [
+        "Generation requires a measured WebGPU environment.",
+        "Tokenizer and configuration files add bytes beyond the listed weight-shard sum.",
+        "A schema-valid answer is not necessarily semantically correct.",
+        "Model quality acceptance requires a real-device held-out evaluation."
+      ]
+    }
+  ]
+}

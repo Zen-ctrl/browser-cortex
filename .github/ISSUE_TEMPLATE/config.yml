@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions and setup help
+    url: https://github.com/Zen-ctrl/browser-cortex/discussions
+    about: Ask usage and design questions without opening a bug report.
+  - name: Report a security vulnerability privately
+    url: https://github.com/Zen-ctrl/browser-cortex/security/advisories/new
+    about: Do not put vulnerability details, credentials, or private data in a public issue.

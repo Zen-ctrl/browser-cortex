@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BrowserCortex real-model verification</title>
+    <style>
+      :root { color-scheme: light; font-family: system-ui, sans-serif; background: #f4f4ef; color: #202722; }
+      body { max-width: 780px; margin: 0 auto; padding: 40px 24px; }
+      main { padding: 28px; border: 1px solid #d9ddd5; border-radius: 18px; background: #fff; box-shadow: 0 18px 60px rgb(36 48 40 / 8%); }
+      h1 { margin-top: 0; font-family: Georgia, serif; font-weight: 500; }
+      li { margin: 8px 0; line-height: 1.45; }
+      button { padding: 11px 16px; border: 0; border-radius: 10px; background: #246849; color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+      button:disabled { cursor: wait; opacity: .6; }
+      pre { max-height: 420px; overflow: auto; padding: 14px; border-radius: 10px; background: #202722; color: #dce9df; font: 12px/1.5 ui-monospace, monospace; white-space: pre-wrap; }
+      .warning { padding: 12px 14px; border: 1px solid #e8c891; border-radius: 10px; background: #fff8e8; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p>BrowserCortex trusted local runner</p>
+      <h1>Real-model verification</h1>
+      <p>This page does not start a download until the button is pressed. The run uses a dedicated test profile, synthetic prompts, and no user documents.</p>
+      <ul>
+        <li>Embedding: <strong>Xenova/all-MiniLM-L6-v2</strong>, immutable revision <code>751bff37182d3f1213fa05d7196b954e230abad9</code>, Apache-2.0, from <code>huggingface.co</code>. The reviewed quantized ONNX artifact is 22,972,370 bytes, plus tokenizer and configuration metadata.</li>
+        <li>Generation: <strong>SmolLM2-360M-Instruct-q4f16_1-MLC</strong>, immutable revision <code>3a622fd89e0216e8bb10c410c007c786baa8a033</code>, base model Apache-2.0, from <code>huggingface.co</code>. Reviewed weight shards total 203,614,080 bytes, plus tokenizer and configuration metadata.</li>
+        <li>Executable WebLLM model library: 5,708,562 bytes, packaged locally and verified with SHA-256 before use.</li>
+        <li>Measurement: 20 cold and 20 warm samples per adapter, fixed retrieval and JSON/abstention probes, and one generation interrupt-and-recovery probe.</li>
+      </ul>
+      <p class="warning">The model cache is separate from the encrypted vault. This verification may retain model assets in its dedicated test profile so a repeat run can measure warm loading.</p>
+      <button id="consent" type="button">Consent and run pinned models</button>
+      <p id="status" role="status">Waiting for explicit consent.</p>
+      <pre id="output" aria-live="polite"></pre>
+    </main>
+    <script type="module" src="/main.ts"></script>
+  </body>
+</html>

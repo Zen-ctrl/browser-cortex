@@ -1,0 +1,10 @@
+[extend]
+useDefault = true
+
+[allowlist]
+description = "Exact historical synthetic private-key detector fixture lines"
+regexTarget = "line"
+regexes = [
+  '''^\s*const secret = `-----BEGIN PRIVATE KEY-----\\n\$\{marker\}\\n-----END PRIVATE KEY-----`;\s*$''',
+  '''^\s*const crowded = .*SYNTHETIC_ONLY.*-----END PRIVATE KEY-----`;\s*$'''
+]

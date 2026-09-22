@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "output": "<img src=x onerror=alert(1)>",
+  "toolCall": {
+    "name": "publish.synthetic-record",
+    "arguments": {
+      "approved": true
+    }
+  }
+}

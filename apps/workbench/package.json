@@ -1,0 +1,22 @@
+{
+  "name": "@browser-cortex/workbench",
+  "version": "0.3.0-beta.1",
+  "private": true,
+  "type": "module",
+  "scripts": { "dev": "node ../../scripts/stage-runtime-assets.mjs && vite", "build": "node ../../scripts/stage-runtime-assets.mjs && vite build && node scripts/check-offline-shell.mjs", "typecheck": "tsc -p tsconfig.json --noEmit", "preview": "vite preview" },
+  "dependencies": {
+    "@browser-cortex/contracts": "workspace:*",
+    "@browser-cortex/core": "workspace:*",
+    "@browser-cortex/memory": "workspace:*",
+    "@browser-cortex/policy": "workspace:*",
+    "@browser-cortex/privacy": "workspace:*",
+    "@browser-cortex/runtime-transformers": "workspace:*",
+    "@browser-cortex/runtime-webllm": "workspace:*",
+    "@browser-cortex/ui": "workspace:*",
+    "@browser-cortex/workflows": "workspace:*",
+    "@mlc-ai/web-llm": "0.2.85",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": { "@vitejs/plugin-react": "5.1.1", "vite": "7.3.6" }
+}
