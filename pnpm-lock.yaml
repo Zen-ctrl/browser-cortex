@@ -249,8 +249,8 @@ importers:
         specifier: workspace:*
         version: link:../contracts
       idb:
-        specifier: 8.0.3
-        version: 8.0.3
+        specifier: 8.0.4
+        version: 8.0.4
       zod:
         specifier: 4.6.5
         version: 4.6.5
@@ -1309,8 +1309,8 @@ packages:
   has-property-descriptors@1.0.2:
     resolution: {integrity: sha512-55JNKuIW+vq4Ke1BjOTjM2YctQIvCT7GFzHwmfZPGo5wnrgkid0YQtnAleFSqumZm4az3n2BS+erby5ipJdgrg==}
 
-  idb@8.0.3:
-    resolution: {integrity: sha512-LtwtVyVYO5BqRvcsKuB2iUMnHwPVByPCXFXOpuU96IZPPoPN6xjOGxZQ74pgSVVLQWtUOYgyeL4GE98BY5D3wg==}
+  idb@8.0.4:
+    resolution: {integrity: sha512-jd0ITCrN+Zah4J7R/Z2jnR3W7A4BXDAjmo62MwWuSjxCiueUAf7X5rbodEdidWzeknwXHmLpdZkoiiCppNi30Q==}
 
   immediate@3.0.6:
     resolution: {integrity: sha512-XXOFtyqDjNDAQxVfYxuF7g9Il/IbWmmlQg2MYKOH8ExIT1qg6xc4zyS3HaEEATgs1btfzxq15ciUiY7gjSXRGQ==}
@@ -2471,7 +2471,7 @@ snapshots:
     dependencies:
       es-define-property: 1.0.1
 
-  idb@8.0.3: {}
+  idb@8.0.4: {}
 
   immediate@3.0.6: {}
 
