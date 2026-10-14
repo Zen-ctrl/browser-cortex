@@ -100,8 +100,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/workflows
       '@mlc-ai/web-llm':
-        specifier: 0.2.85
-        version: 0.2.85
+        specifier: 0.2.86
+        version: 0.2.86
       react:
         specifier: 19.3.0
         version: 19.3.0
@@ -146,8 +146,8 @@ importers:
         specifier: workspace:*
         version: link:../../packages/workflows
       '@mlc-ai/web-llm':
-        specifier: 0.2.85
-        version: 0.2.85
+        specifier: 0.2.86
+        version: 0.2.86
       react:
         specifier: 19.3.0
         version: 19.3.0
@@ -288,8 +288,8 @@ importers:
         specifier: workspace:*
         version: link:../contracts
       '@mlc-ai/web-llm':
-        specifier: 0.2.85
-        version: 0.2.85
+        specifier: 0.2.86
+        version: 0.2.86
 
   packages/testkit:
     dependencies:
@@ -893,8 +893,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@mlc-ai/web-llm@0.2.85':
-    resolution: {integrity: sha512-CwUiSAvDCYnmAZlpPMkurPHDfBLq6fvdRB3vRgoA894hRG/V/BSeY9bmMm6iIIU5VpjJxfb/dLPpJX2at0L9rw==}
+  '@mlc-ai/web-llm@0.2.86':
+    resolution: {integrity: sha512-plciXBCYtY7iTKHzEcsqOfSO+s5u8NqMYFPnHmRbsN8CEdKcolgXIoGLPbzO6FtJHV43m7YP00x6qQ6Kb8CJJw==}
 
   '@napi-rs/lzma-linux-x64-gnu@1.5.1':
     resolution: {integrity: sha512-oTXEIha4SsuXdTA4Iyskj0kpdx2yVXdhd75c2v3xGrHFfVMsbhTPZU/nMPL4sWKo4pBHm3aucLaqGlF696dTyQ==}
@@ -2067,7 +2067,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.6.0
 
-  '@mlc-ai/web-llm@0.2.85':
+  '@mlc-ai/web-llm@0.2.86':
     dependencies:
       loglevel: 1.9.2
 
