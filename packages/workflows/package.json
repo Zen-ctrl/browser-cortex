@@ -9,7 +9,7 @@
     "@browser-cortex/contracts": "workspace:*",
     "@browser-cortex/policy": "workspace:*",
     "decimal.js": "10.6.0",
-    "zod": "4.6.5"
+    "zod": "4.6.6"
   }
 }
 
