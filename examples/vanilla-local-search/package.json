@@ -9,5 +9,5 @@
     "@browser-cortex/memory": "workspace:*",
     "@browser-cortex/runtime-transformers": "workspace:*"
   },
-  "devDependencies": { "vite": "7.3.6" }
+  "devDependencies": { "vite": "7.3.7" }
 }

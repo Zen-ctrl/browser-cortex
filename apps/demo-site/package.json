@@ -5,5 +5,5 @@
   "type": "module",
   "scripts": { "dev": "vite", "build": "vite build", "typecheck": "tsc -p tsconfig.json --noEmit", "preview": "vite preview" },
   "dependencies": { "react": "19.3.0", "react-dom": "19.3.0" },
-  "devDependencies": { "@vitejs/plugin-react": "5.1.1", "vite": "7.3.6" }
+  "devDependencies": { "@vitejs/plugin-react": "5.1.1", "vite": "7.3.7" }
 }
