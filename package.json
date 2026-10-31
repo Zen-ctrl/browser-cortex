@@ -72,7 +72,7 @@
     "@vitejs/plugin-react": "5.1.1",
     "fake-indexeddb": "6.2.4",
     "fast-check": "4.10.2",
-    "happy-dom": "20.14.5",
+    "happy-dom": "21.0.4",
     "jszip": "3.10.2",
     "tsx": "4.20.6",
     "typescript": "5.9.3",

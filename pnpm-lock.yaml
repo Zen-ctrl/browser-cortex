@@ -33,8 +33,8 @@ importers:
         specifier: 4.10.2
         version: 4.10.2
       happy-dom:
-        specifier: 20.14.5
-        version: 20.14.5
+        specifier: 21.0.4
+        version: 21.0.4
       jszip:
         specifier: 3.10.2
         version: 3.10.2
@@ -49,7 +49,7 @@ importers:
         version: 7.3.6(@types/node@24.10.0)(tsx@4.20.6)
       vitest:
         specifier: 4.1.11
-        version: 4.1.11(@types/node@24.10.0)(happy-dom@20.14.5)(vite@7.3.6(@types/node@24.10.0)(tsx@4.20.6))
+        version: 4.1.11(@types/node@24.10.0)(happy-dom@21.0.4)(vite@7.3.6(@types/node@24.10.0)(tsx@4.20.6))
 
   apps/demo-site:
     dependencies:
@@ -62,10 +62,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: 5.1.1
-        version: 5.1.1(vite@7.3.6(@types/node@24.10.0)(tsx@4.20.6))
+        version: 5.1.1(vite@7.3.6(@types/node@26.6.6)(tsx@4.20.6))
       vite:
         specifier: 7.3.6
-        version: 7.3.6(@types/node@24.10.0)(tsx@4.20.6)
+        version: 7.3.6(@types/node@26.6.6)(tsx@4.20.6)
 
   apps/extension:
     dependencies:
@@ -111,10 +111,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: 5.1.1
-        version: 5.1.1(vite@7.3.6(@types/node@24.10.0)(tsx@4.20.6))
+        version: 5.1.1(vite@7.3.6(@types/node@26.6.6)(tsx@4.20.6))
       vite:
         specifier: 7.3.6
-        version: 7.3.6(@types/node@24.10.0)(tsx@4.20.6)
+        version: 7.3.6(@types/node@26.6.6)(tsx@4.20.6)
 
   apps/workbench:
     dependencies:
@@ -157,10 +157,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: 5.1.1
-        version: 5.1.1(vite@7.3.6(@types/node@24.10.0)(tsx@4.20.6))
+        version: 5.1.1(vite@7.3.6(@types/node@26.6.6)(tsx@4.20.6))
       vite:
         specifier: 7.3.6
-        version: 7.3.6(@types/node@24.10.0)(tsx@4.20.6)
+        version: 7.3.6(@types/node@26.6.6)(tsx@4.20.6)
 
   examples/developer-online-gateway:
     dependencies:
@@ -192,10 +192,10 @@ importers:
     devDependencies:
       '@vitejs/plugin-react':
         specifier: 5.1.1
-        version: 5.1.1(vite@7.3.6(@types/node@24.10.0)(tsx@4.20.6))
+        version: 5.1.1(vite@7.3.6(@types/node@26.6.6)(tsx@4.20.6))
       vite:
         specifier: 7.3.6
-        version: 7.3.6(@types/node@24.10.0)(tsx@4.20.6)
+        version: 7.3.6(@types/node@26.6.6)(tsx@4.20.6)
 
   examples/vanilla-local-search:
     dependencies:
@@ -211,7 +211,7 @@ importers:
     devDependencies:
       vite:
         specifier: 7.3.6
-        version: 7.3.6(@types/node@24.10.0)(tsx@4.20.6)
+        version: 7.3.6(@types/node@26.6.6)(tsx@4.20.6)
 
   packages/bridge:
     dependencies:
@@ -1101,6 +1101,9 @@ packages:
   '@types/node@24.10.0':
     resolution: {integrity: sha512-qzQZRBqkFsYyaSWXuEHc2WR9c0a0CXwiE5FWUvn7ZM+vdy1uZLfCunD38UzhuB7YN/J11ndbDBcTmOdxJo9Q7A==}
 
+  '@types/node@26.6.6':
+    resolution: {integrity: sha512-MzQj+8Kx3XI40OmUAE6Qoh58ZMNstNNMwn2nfd3qWsfe7nDNSqJNzes4njhz6AHwrSHOffSLwXU6yb474Q4aog==}
+
   '@types/react-dom@19.3.0':
     resolution: {integrity: sha512-ZI7bU42mZXXKHn/qNLEw2IrbiINU7X5+vfgdixBHkCNpYWXjKgfQ/P+uyGb5CjOLB9UcnTeg3rylQtV2hym44Q==}
     peerDependencies:
@@ -1112,8 +1115,8 @@ packages:
   '@types/whatwg-mimetype@3.0.2':
     resolution: {integrity: sha512-c2AKvDT8ToxLIOUlN51gTiHXflsfIFisS4pO7pDPoKouJCESkhZnEy623gwP9laCy5lnLDAw1vAzu2vM2YLOrA==}
 
-  '@types/ws@8.18.1':
-    resolution: {integrity: sha512-ThVF6DCVhA8kUGy+aazFQ4kXQ7E1Ty7A3ypFOe0IcJV8O/M511G99AW24irKrW56Wt44yG9+ij8FaqoBGkuBXg==}
+  '@types/ws@8.18.2':
+    resolution: {integrity: sha512-67MQl+fpWKVTT1NYdnmo3U4sc/xPo/zQBncVnI74qmQa0z/b+1g6iYqNmGCPbxO+zz2aklb08a0oHfegiVd0/w==}
 
   '@vitejs/plugin-react@5.1.1':
     resolution: {integrity: sha512-WQfkSw0QbQ5aJ2CHYw23ZGkqnRwqKHD/KYsMeTkZzPT4Jcf0DcBxBtwMJxnu6E7oxw5+JC6ZAiePgh28uJ1HBA==}
@@ -1302,8 +1305,8 @@ packages:
   guid-typescript@1.0.9:
     resolution: {integrity: sha512-Y8T4vYhEfwJOTbouREvG+3XDsjr8E3kIr7uf+JZ0BYloFsttiHU0WfvANVsR7TxNUJa/WpCnw/Ino/p+DeBhBQ==}
 
-  happy-dom@20.14.5:
-    resolution: {integrity: sha512-x/RzkpWO40bTjIoT30iQtt64FLLmH/iRcUCN2X//bLx7H3ifkdfPXyqsro/OYtqzIAhiLMMA7mmiOR9C3NOKjQ==}
+  happy-dom@21.0.4:
+    resolution: {integrity: sha512-tFm+GaLBgo6o0awHnvHaNoraVo27qJ+2tZEtZ+cIa08hXbeitrxAJajLI05hsUy/2/YTKcUjQYzHe5mCcraLBw==}
     engines: {node: '>=20.0.0'}
 
   has-property-descriptors@1.0.2:
@@ -1536,6 +1539,9 @@ packages:
   undici-types@7.16.0:
     resolution: {integrity: sha512-Zz+aZWSj8LE6zoxD+xrjh4VfkIG8Ya6LvYkZqtUQGJPZjYl53ypCaUwWqo7eI0x66KBGeRo+mlBEkMSeSZ38Nw==}
 
+  undici-types@8.9.0:
+    resolution: {integrity: sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg==}
+
   update-browserslist-db@1.3.3:
     resolution: {integrity: sha512-pJ2sYawQS0R/WI928Gj5GlPhTGzbMelq0+4INtSYNDV9ErKJcX6xjGWkoG/VnB3dpUm00zALaqkrUD77pO5TDQ==}
     hasBin: true
@@ -1635,8 +1641,8 @@ packages:
     engines: {node: '>=8'}
     hasBin: true
 
-  ws@8.21.3:
-    resolution: {integrity: sha512-201TZ/kPWxoPr/OKWjquZR1SWKXcvxdH+e1xrx89b3YbmzLMFCLfnaG1HFIgWzJOEWZ7MvpK++odZufgYR50Rw==}
+  ws@8.22.1:
+    resolution: {integrity: sha512-oyL6OPYme/CmiFvNuGzeoxCJ4nOrZE2O1FwM9MWM1AsGri6nLXB2pg+lNA8aLeXMSav0J6eIVS1j6vUPzUtK9g==}
     engines: {node: '>=10.0.0'}
     peerDependencies:
       bufferutil: ^4.0.1
@@ -2224,6 +2230,11 @@ snapshots:
     dependencies:
       undici-types: 7.16.0
 
+  '@types/node@26.6.6':
+    dependencies:
+      undici-types: 8.9.0
+    optional: true
+
   '@types/react-dom@19.3.0(@types/react@19.3.0)':
     dependencies:
       '@types/react': 19.3.0
@@ -2234,7 +2245,7 @@ snapshots:
 
   '@types/whatwg-mimetype@3.0.2': {}
 
-  '@types/ws@8.18.1':
+  '@types/ws@8.18.2':
     dependencies:
       '@types/node': 24.10.0
 
@@ -2247,6 +2258,18 @@ snapshots:
       '@types/babel__core': 7.20.5
       react-refresh: 0.18.0
       vite: 7.3.6(@types/node@24.10.0)(tsx@4.20.6)
+    transitivePeerDependencies:
+      - supports-color
+
+  '@vitejs/plugin-react@5.1.1(vite@7.3.6(@types/node@26.6.6)(tsx@4.20.6))':
+    dependencies:
+      '@babel/core': 7.29.7
+      '@babel/plugin-transform-react-jsx-self': 7.29.7(@babel/core@7.29.7)
+      '@babel/plugin-transform-react-jsx-source': 7.29.7(@babel/core@7.29.7)
+      '@rolldown/pluginutils': 1.0.0-beta.47
+      '@types/babel__core': 7.20.5
+      react-refresh: 0.18.0
+      vite: 7.3.6(@types/node@26.6.6)(tsx@4.20.6)
     transitivePeerDependencies:
       - supports-color
 
@@ -2454,15 +2477,15 @@ snapshots:
 
   guid-typescript@1.0.9: {}
 
-  happy-dom@20.14.5:
+  happy-dom@21.0.4:
     dependencies:
       '@types/node': 24.10.0
       '@types/whatwg-mimetype': 3.0.2
-      '@types/ws': 8.18.1
+      '@types/ws': 8.18.2
       buffer-image-size: 0.6.4
       entities: 7.0.1
       whatwg-mimetype: 3.0.0
-      ws: 8.21.3
+      ws: 8.22.1
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -2720,6 +2743,9 @@ snapshots:
 
   undici-types@7.16.0: {}
 
+  undici-types@8.9.0:
+    optional: true
+
   update-browserslist-db@1.3.3(browserslist@4.29.0):
     dependencies:
       browserslist: 4.29.0
@@ -2741,7 +2767,20 @@ snapshots:
       fsevents: 2.3.3
       tsx: 4.20.6
 
-  vitest@4.1.11(@types/node@24.10.0)(happy-dom@20.14.5)(vite@7.3.6(@types/node@24.10.0)(tsx@4.20.6)):
+  vite@7.3.6(@types/node@26.6.6)(tsx@4.20.6):
+    dependencies:
+      esbuild: 0.28.2
+      fdir: 6.5.0(picomatch@4.0.7)
+      picomatch: 4.0.7
+      postcss: 8.5.28
+      rollup: 4.63.4
+      tinyglobby: 0.2.17
+    optionalDependencies:
+      '@types/node': 26.6.6
+      fsevents: 2.3.3
+      tsx: 4.20.6
+
+  vitest@4.1.11(@types/node@24.10.0)(happy-dom@21.0.4)(vite@7.3.6(@types/node@24.10.0)(tsx@4.20.6)):
     dependencies:
       '@vitest/expect': 4.1.11
       '@vitest/mocker': 4.1.11(vite@7.3.6(@types/node@24.10.0)(tsx@4.20.6))
@@ -2765,7 +2804,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 24.10.0
-      happy-dom: 20.14.5
+      happy-dom: 21.0.4
     transitivePeerDependencies:
       - msw
 
@@ -2776,7 +2815,7 @@ snapshots:
       siginfo: 2.0.0
       stackback: 0.0.2
 
-  ws@8.21.3: {}
+  ws@8.22.1: {}
 
   yallist@3.1.1: {}
 
